@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+/* reset */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif, 'Microsoft JhengHei', arial;
+    padding: 0;
+    margin: 0;
+    color: #505050;
+    font-size: 1.2vw;
+}
+
+ul,
+li,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+input,
+select,
+button {
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+h2 {
+    font-size: 2.6vw;
+    font-weight: 300;
+}
+
+img {
+    border: none;
+    outline: none;
+    max-width: 100%;
+}
+
+p {
+    font-size: 1.2vw;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+mark {
+    background: none;
+}
+
+
+/* start */
+
+#app {
+    position: relative;
+}
+
+.area {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+article.area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+article.area h2 {
+    position: relative;
+    width: 35%;
+    padding: 3%;
+    margin: 0;
+    height: 100%;
+    font-weight: 300;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article.area h2:before {
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+article.area h2 span {
+    position: relative;
+    background: rgba(0, 0, 0, .65);
+    padding: 3.5% 5%;
+}
+
+article.area h3 {
+    display: none;
+}
+
+article.area>div {
+    width: 65%;
+    padding: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+article.area>div>div {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.number-data {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.first-letter::first-letter {
+    font-size: 1.5em;
+}
+
+.chart-title {
+    text-align: center;
+}
+
+.chart-title span {
+    display: inline-block;
+    background: #505050;
+    color: white;
+    padding: 0.3em 1em;
+    margin: 0.5em 0;
+    border-radius: 1em;
+}
+
+.chart-title small {
+    display: block;
+}
+
+a.readmore {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    padding-right: 2.4em;
+    -webkit-animation-name: move;
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+a.readmore svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -0.1vw;
+}
+
+@keyframes move {
+    from {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10%, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@media (hover: hover) {}
+
+
+/* 直式 */
+
+@media (orientation: portrait) {
+    article.area {
+        display: block;
+    }
+    article.area h2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    article.area h2 span {
+        display: none;
+    }
+    article.area h3 {
+        font-weight: normal;
+        display: block;
+        width: 100%;
+        margin-bottom: 0.4em;
+    }
+    article.area h3 mark {
+        color: #505050;
+        margin-right: 0.6em;
+    }
+    article.area>div {
+        width: 100%;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    article.area>div>div {
+        position: relative;
+        background: rgba(255, 255, 255, .9);
+        padding: 4%;
+    }
+    article.area>div>div small {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -0.5em;
+        transform: translate(0, 100%);
+    }
+    article.area .first-letter {
+        margin-top: 0;
+    }
+    .chart-title span {
+        padding: 0.2em 1em;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    body,
+    p,
+    #data-article1 .number-data span {
+        font-size: 1.6vw;
+    }
+    h2 {
+        font-size: 3.2vw;
+    }
+    #timeline article p {
+        width: 100%;
+    }
+    article.area h3 {
+        font-size: 3vw;
+    }
+}
+
+
+/* ipad */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    body,
+    p,
+    #data-article1 .number-data span {
+        font-size: 2.4vw;
+    }
+    h2 {
+        font-size: 4vw;
+    }
+    article.area>div {
+        padding: 10%;
+    }
+    #timeline article h2,
+    article.area h3 {
+        font-size: 4vw;
+    }
+    .article-card img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    body,
+    p,
+    #data-article1 .number-data span {
+        font-size: 4.5vw;
+    }
+    p {
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    h2 {
+        font-size: 6.5vw;
+        font-weight: normal;
+        letter-spacing: 3px;
+    }
+    article.area h3 {
+        font-size: 6.3vw;
+        white-space: nowrap;
+    }
+    article.area>div {
+        padding: 4%;
+    }
+    .first-letter::first-letter {
+        font-size: 1.3em;
+    }
+    a.readmore {
+        right: 50%;
+        animation-name: movemobile;
+    }
+    .fadein-model a.readmore {
+        right: auto;
+        animation-name: move;
+    }
+}
+
+@keyframes movemobile {
+    from {
+        transform: translate(50%, 0);
+    }
+    50% {
+        transform: translate(60%, 0);
+    }
+    to {
+        transform: translate(50%, 0);
+    }
+}
+
+@media screen and (max-width: 320px) {}
